@@ -1,5 +1,6 @@
 import "../assets/global.scss"
 import CardContainer from "../components/layout/CardContainer"
+import MainFooter from "../components/layout/CardFooter"
 
 function MyApp ({Component,pageProps}) {
     
@@ -8,6 +9,7 @@ function MyApp ({Component,pageProps}) {
             <CardContainer>
                 <Component {...pageProps}/>
             </CardContainer>
+            <MainFooter/>
         </>
     )
 }

@@ -1,8 +1,13 @@
+import CardHeader from "../CardHeader"
+
 const CardContainer = ({children}) => {
     return (
-        <section id="card-container">
-            {children}
-        </section>
+        <main id="card-container">
+            <CardHeader/>
+            <section id="card-container-content">
+                {children}
+            </section>
+        </main>
     )
 }
 
