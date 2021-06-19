@@ -1,12 +1,13 @@
-import Header from "../components/layout/Header"
-import Footer from "../components/layout/Footer"
+import "../assets/global.scss"
+import CardContainer from "../components/layout/CardContainer"
 
 function MyApp ({Component,pageProps}) {
+    
     return (
         <>
-        <Header/>
-        <Component {...pageProps}/>
-        <Footer/>
+            <CardContainer>
+                <Component {...pageProps}/>
+            </CardContainer>
         </>
     )
 }

@@ -1,3 +1,8 @@
-const Home = () => "Hola Mundo"
+const Home = () => {
+    return (
+        <>
+        </>
+    )
+}
 
 export default Home
