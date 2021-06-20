@@ -1,12 +1,15 @@
+import { useSelector } from 'react-redux'
 import CardHeader from "../CardHeader"
+import CardFooter from "../CardFooter"
+import CardContent from '../CardContent'
 
 const CardContainer = ({children}) => {
+
     return (
         <main id="card-container">
             <CardHeader/>
-            <section id="card-container-content">
-                {children}
-            </section>
+            <CardContent children={children}/>
+            <CardFooter/>
         </main>
     )
 }

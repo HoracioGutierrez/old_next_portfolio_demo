@@ -1,12 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { toggleCard } from '../../../api/actions'
+import { useCardState } from '../../../api/CustomHooks'
 import SocialNavBar from '../../widgets/SocialNavBar'
 import CardAvatar from '../CardAvatar'
 import CardTitle from '../CardTitle'
 
 const CardHeader = () => {
-
-    const card_open = useSelector(({card_open})=>card_open)
+    
+    const card_open = useCardState()
     const dispatch = useDispatch()
 
     const handleToggle = () => {
