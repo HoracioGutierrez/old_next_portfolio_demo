@@ -1,6 +1,10 @@
-import { CARD_TOGGLE, DARK_TOGGLE, TAB_CHANGE } from "./action_const"
+import { CARD_TOGGLE, CHAT_CLOSE, CHAT_MINI, CHAT_OPEN, DARK_TOGGLE, TAB_CHANGE } from "./action_const"
 
 const init = {
+    chat : {
+        open : false,
+        mini : false
+    },
     dark : false,
     card_open : true,
     tabs : [
@@ -11,6 +15,34 @@ const init = {
 
 const reducer = (state = init, action) => {
     switch (action.type) {
+
+        case CHAT_MINI : 
+
+            return {
+                ...state,
+                chat : {
+                    ...state.chat,
+                    mini : !state.chat.mini
+                }
+            }
+
+        case CHAT_CLOSE : 
+            return {
+                ...state,
+                chat : {
+                    ...state.chat,
+                    open : false
+                }
+            }
+
+        case CHAT_OPEN : 
+            return {
+                ...state,
+                chat : {
+                    ...state.chat,
+                    open : true
+                }
+            }
 
         case DARK_TOGGLE :
             return {

@@ -3,6 +3,7 @@ import store from "../api/store"
 import "../assets/global.scss"
 import CardContainer from "../components/layout/CardContainer"
 import MainFooter from "../components/layout/MainFooter"
+import Chat from "../components/layout/Chat"
 
 function MyApp ({Component,pageProps}) {
     
@@ -11,6 +12,7 @@ function MyApp ({Component,pageProps}) {
             <CardContainer>
                 <Component {...pageProps}/>
             </CardContainer>
+            <Chat/>
             <MainFooter/>
         </Provider>
     )

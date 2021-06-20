@@ -1,3 +1,6 @@
 export const CARD_TOGGLE = "CARD_TOGGLE"
 export const TAB_CHANGE = "TAB_CHANGE"
 export const DARK_TOGGLE = "DARK_TOGGLE"
+export const CHAT_OPEN = "CHAT_OPEN"
+export const CHAT_CLOSE = "CHAT_CLOSE"
+export const CHAT_MINI = "CHAT_MINI"

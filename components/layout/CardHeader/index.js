@@ -14,8 +14,6 @@ const CardHeader = ({dark}) => {
         dispatch(toggleCard())
     }
 
-    console.log(dark)
-
     return (
         <section id="card-container-header" className={`${dark&&"dark"}`}>
             <div id="overlay">

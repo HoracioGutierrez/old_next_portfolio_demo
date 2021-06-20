@@ -16,6 +16,10 @@ html , body , #__next {
     min-height: 100vh;
 }
 
+body {
+    overflow: hidden;
+}
+
 #__next {
     background-image: linear-gradient(to bottom right, #688AE2 , #6E1997) ;
     display: flex;
@@ -23,6 +27,7 @@ html , body , #__next {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    overflow: hidden;
 }
 
 #card-container {
@@ -343,5 +348,96 @@ html , body , #__next {
 
     @media screen and (min-width:$medium) {
         font-size: 1rem;
+    }
+}
+
+#chat {
+    border-radius: 3px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    right: 10px;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: 1;
+    width: 300px;
+
+    #chat-header {
+        color: whitesmoke;
+        height: 40px;
+        background-color: rgb(2, 9, 70);
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        justify-content: space-between;
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .material-icons {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: whitesmoke;
+            &:nth-child(2) {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &.mini {
+        transform: translateY(calc(100% - 40px))!important;
+    }
+
+    &.closed {
+        transform: translateY(100%)!important;
+    }
+
+    &.open {
+        transform: translateY(0%);
+    }
+
+    #chat-content {
+        display: flex;
+        flex-direction: column;
+
+        #chat-mensajes {
+            flex-grow: 1;
+            padding: 10px;
+            p {
+                text-align: center;
+                padding: 0 1.5rem;
+            }
+        }
+        
+        #chat-form {
+            width: 100%;
+            border-top: 1px solid grey;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+
+            textarea {
+                resize: none;
+                border: none;
+                outline: none;
+                padding: 10px;
+                flex-grow: 1;
+            }
+
+            button {
+                margin-left: 10px;
+                padding: 0.1rem 0.8rem;
+                border-radius: 5px;
+                border: none;
+                background-color: rgb(2, 9, 70);
+                color: white;
+            }
+        }
+        
     }
 }
