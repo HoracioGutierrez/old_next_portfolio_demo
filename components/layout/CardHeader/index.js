@@ -5,7 +5,7 @@ import SocialNavBar from '../../widgets/SocialNavBar'
 import CardAvatar from '../CardAvatar'
 import CardTitle from '../CardTitle'
 
-const CardHeader = () => {
+const CardHeader = ({dark}) => {
     
     const card_open = useCardState()
     const dispatch = useDispatch()
@@ -14,8 +14,10 @@ const CardHeader = () => {
         dispatch(toggleCard())
     }
 
+    console.log(dark)
+
     return (
-        <section id="card-container-header">
+        <section id="card-container-header" className={`${dark&&"dark"}`}>
             <div id="overlay">
                 {card_open && <button onClick={handleToggle} className="material-icons">close</button>}
             </div>

@@ -5,11 +5,13 @@ import CardContent from '../CardContent'
 
 const CardContainer = ({children}) => {
 
+    const dark = useSelector(({dark})=>dark)
+
     return (
         <main id="card-container">
-            <CardHeader/>
-            <CardContent children={children}/>
-            <CardFooter/>
+            <CardHeader dark={dark}/>
+            <CardContent children={children} dark={dark}/>
+            <CardFooter dark={dark}/>
         </main>
     )
 }

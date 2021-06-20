@@ -61,6 +61,13 @@ html , body , #__next {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &.dark {
+        #overlay {
+            background-color: rgb(0 0 0 / 70%);
+        }
+    }
 
     #profile-toggler {
         position: relative;
@@ -190,6 +197,24 @@ html , body , #__next {
     
     /* padding: 10px; */
 
+    &.dark {
+        background-color: rgb(128 128 128 / 85%);
+
+        .tab-link.active {
+            color: #602080;
+            font-weight: bold;
+        }
+
+        .tab-link {
+            color: white;
+            font-weight: 300;
+        }
+
+        #tab-container .horizontal-rule {
+            background-color: white;
+        }
+    }
+
     &.closed {
         display: none;
     }
@@ -249,6 +274,13 @@ html , body , #__next {
     .horizontal-rule {
         top: 0;
     }
+
+    &.dark {
+        background-color: rgb(128 128 128 / 85%);
+        .horizontal-rule {
+            background-color: white;
+        }
+    }
 }
 
 #card-container-footer {
@@ -257,6 +289,12 @@ html , body , #__next {
     justify-content: space-between;
     padding: 0 10px;
     flex-grow: 1;
+    position: relative;
+    
+    #dark-menu {
+        position: absolute;
+        right: 40px;
+    }
 
     nav {
         button {
@@ -268,6 +306,7 @@ html , body , #__next {
         background-color: transparent;
         border: none;
         outline: none;
+        cursor: pointer;
     }
 }
 

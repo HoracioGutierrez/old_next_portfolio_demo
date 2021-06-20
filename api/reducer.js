@@ -1,6 +1,7 @@
-import { CARD_TOGGLE, TAB_CHANGE } from "./action_const"
+import { CARD_TOGGLE, DARK_TOGGLE, TAB_CHANGE } from "./action_const"
 
 const init = {
+    dark : false,
     card_open : true,
     tabs : [
         {id:1,text:"Bio",url:"/",active:true},
@@ -10,6 +11,12 @@ const init = {
 
 const reducer = (state = init, action) => {
     switch (action.type) {
+
+        case DARK_TOGGLE :
+            return {
+                ...state,
+                dark : !state.dark
+            }
 
         case TAB_CHANGE : 
             return {
