@@ -188,22 +188,75 @@ html , body , #__next {
 
 #card-container-content {
     
-    padding: 10px;
+    /* padding: 10px; */
 
     &.closed {
         display: none;
     }
 }
 
-#card-container-footer-containter {
+.react-slidedown.custom-slidedown {
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+
+.page {
+    padding: 2rem 10px;
+}
+
+
+#tab-container {
+    height: 50px;
     position: relative;
+    .tabs {
+        display: flex;
+        /* margin-bottom: 0.5rem; */
+        height: 100%;
+        padding: 0 10px;
+        align-items: center;
+    }
+    .horizontal-rule {
+        bottom: 0;
+    }
+}
+
+.tab-link {
+
+    font-weight: 200;
+    text-decoration: none;
+    color: #B1B1B1;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+    &.active {
+        font-weight: bold;
+        color: #6981DC;
+    }
+}
+
+.horizontal-rule-tab {
+    height: 1px;
+    background-color: rgb(204, 204, 204);
+}
+
+#card-container-footer-containter {
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .horizontal-rule {
+        top: 0;
+    }
 }
 
 #card-container-footer {
 
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0 10px;
+    flex-grow: 1;
 
     nav {
         button {
@@ -222,7 +275,7 @@ html , body , #__next {
 
     position: absolute;
     padding: 0 10px;
-    width: 98%;
+    width: 96%;
     height: 1px;
     background-color: rgb(204, 204, 204);
     left: 50%;

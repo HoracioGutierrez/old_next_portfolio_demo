@@ -1,4 +1,8 @@
 import { useCardState } from "../../../api/CustomHooks"
+import CardTabs from "../CardTabs"
+import {SlideDown} from 'react-slidedown'
+import 'react-slidedown/lib/slidedown.css'
+
 
 const CardContent = ({children}) => {
 
@@ -6,7 +10,11 @@ const CardContent = ({children}) => {
 
     return (
         <section id="card-container-content" className={`${card_open?"open":"closed"}`}>
-            {children}
+            <SlideDown className="custom-slidedown">
+                            
+                {card_open ? <><CardTabs card_open={card_open}/>{children}</> : null}
+
+            </SlideDown>
         </section>
     )
 }
