@@ -2,7 +2,7 @@ import { Provider } from "react-redux"
 import store from "../api/store"
 import "../assets/global.scss"
 import CardContainer from "../components/layout/CardContainer"
-import MainFooter from "../components/layout/CardFooter"
+import MainFooter from "../components/layout/MainFooter"
 
 function MyApp ({Component,pageProps}) {
     

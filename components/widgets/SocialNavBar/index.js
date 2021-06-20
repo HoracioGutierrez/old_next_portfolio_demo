@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-const SocialNavBar = () => {
+const SocialNavBar = ({card_open}) => {
     return (
-        <nav className="social-navbar">
+        <nav className={`social-navbar ${card_open?"open":"closed"}`}>
 
             <Link href="https://github.com/horagutierrez">
                 <a target="_blank" className="social-icon" id="github">
